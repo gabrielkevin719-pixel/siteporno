@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ASSINE JÁ!</title>
+
+    <link rel="preload" as="video" href="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/header_360p.mp4" type="video/mp4" fetchpriority="high">
+    <link rel="preload" as="image" href="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/header_poster.webp" fetchpriority="high">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev" crossorigin>
+    <link rel="stylesheet" href="/static/app.css?v=tezgws">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --safe-top: env(safe-area-inset-top);
+            --safe-bottom: env(safe-area-inset-bottom);
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #0a0a0f;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            padding-bottom: calc(20px + var(--safe-bottom));
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                background: radial-gradient(circle at center, #1a0a0a 0%, #050505 100%);
+            }
+        }
+
+        .plan-card {
+            background: #1c1c1e;
+            border: 2px solid #2c2c2e;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .plan-card.selected {
+            border-color: #ff0000;
+            background: rgba(255, 0, 0, 0.05);
+        }
+
+        .custom-radio {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plan-card.selected .custom-radio {
+            border-color: #ff0000;
+        }
+
+        .custom-radio::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff0000;
+            transform: scale(0);
+            transition: transform 0.2s ease;
+        }
+
+        .plan-card.selected .custom-radio::after {
+            transform: scale(1);
+        }
+
+        .btn-pulse {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            }
+            70% {
+                transform: scale(1.03);
+                box-shadow: 0 0 0 15px rgba(255, 0, 0, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 260px;
+            height: 380px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .swiper-slide-active {
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+    <!-- START ExoClick Goal Tag | COPY - VIEW -->
+    <script type="application/javascript" src="https://a.magsrv.com/tag_gen.js" data-goal="2c559928e73bb8f82282be918f99b399"></script>
+    <!-- END ExoClick Goal Tag | COPY - VIEW -->
+</head>
+
+<body>
+
+    <div class="mobile-container">
+
+        <div class="p-3 bg-red-600 text-center sticky top-0 z-[60] shadow-lg">
+            <p class="text-[12px] sm:text-sm text-white font-black uppercase tracking-widest">
+                ⚠️ OPORTUNIDADE ÚNICA EXPIRA EM: <span id="timer" class="bg-black/20 px-2 py-0.5 rounded">14:59</span>
+            </p>
+        </div>
+
+        <div data-section="hero" class="p-4 text-center mt-6">
+
+            <h1 class="text-2xl font-black uppercase leading-tight mb-1">ASSINE JÁ!</h1>
+
+
+            <p class="text-[11px] text-gray-400 font-bold uppercase tracking-widest mb-4">Liberação imediata do acesso</p>
+
+
+
+            <div data-section="video" class="w-full relative bg-black rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                <video id="heroVideo" class="w-full aspect-video object-cover" autoplay muted loop playsinline webkit-playsinline controlsList="nodownload" preload="auto" fetchpriority="high" src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/header_360p.mp4"
+                    type="video/mp4" poster="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/header_poster.webp"></video>
+            </div>
+
+        </div>
+
+
+        <div data-section="pricing" class="p-4 mt-2" id="plans-section">
+            <h2 class="text-lg font-bold mb-4 uppercase flex items-center gap-2">
+                <svg class="inline-block text-red-600 align-[-0.125em]" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M159.3 5.4c7.8-7.3 19.9-7.5 27.8-.4c54 49.5 109.5 117.2 109.5 200.4c0 39.5-13 75.5-35.5 105.7c-2.7 3.6-7.4 6.7-12.1 6.7c-7.7 0-12.7-5.7-13.7-13.4C232.6 269.7 220 247.9 197.4 232c-3.7-2.6-7.7 1.4-7.6 5.6c.4 21.6-3.3 53.4-22.1 92.5c-25.6 53.2-94.5 96.4-149.9 105.6C7.6 437.4-1 428.4 .1 418.5C12.6 304.7 50.5 153.4 159.3 5.4z"/></svg>                ⬇️GOZADA GARANTIDA⬇️
+            </h2>
+
+            <form method="POST" action="/click" id="plan-form">
+                <input type="hidden" name="offer_id" value="1e4dd48e-dfe8-4fa4-a021-451bde770fa9">
+                <input type="hidden" name="position" id="position-input" value="">
+
+                <div class="space-y-3">
+
+
+                    <label class="block cursor-pointer relative">
+                    <input type="radio" name="plan" value="1" class="hidden plan-radio"
+                           >
+                    
+                    <div class="plan-card  p-4 flex items-center justify-between" data-position="1">
+                        <div class="flex items-center gap-3">
+                            <div class="custom-radio"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">🔥 Mensal PROMOÇÃO por</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xl font-black text-white">R$ 4,97</span>
+                        </div>
+                    </div>
+                </label>
+
+
+
+                    <label class="block cursor-pointer relative">
+                    <input type="radio" name="plan" value="2" class="hidden plan-radio"
+                           >
+                    
+                    <div class="plan-card  p-4 flex items-center justify-between" data-position="2">
+                        <div class="flex items-center gap-3">
+                            <div class="custom-radio"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">😈 Para sempre &#43; Bonus Ocultos🥇 por</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xl font-black text-white">R$ 9,97</span>
+                        </div>
+                    </div>
+                </label>
+
+
+
+                    <label class="block cursor-pointer relative">
+                    <input type="radio" name="plan" value="3" class="hidden plan-radio"
+                           checked>
+                    
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 shadow-lg border border-white/20">
+                        Recomendado
+                    </div>
+                    
+                    <div class="plan-card selected p-4 flex items-center justify-between" data-position="3">
+                        <div class="flex items-center gap-3">
+                            <div class="custom-radio"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">💎VITALICIO &#43; OCULTOS &#43; MAKABROS 🎁 por </h3>
+                                
+                                <p class="text-xs text-gray-400 font-medium">Melhor custo-benefício</p>
+                                
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xl font-black text-white">R$ 14,97</span>
+                        </div>
+                    </div>
+                </label>
+
+
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" id="main-cta" class="cta-button w-full bg-red-600 hover:bg-red-700 text-white font-black text-xl py-5 rounded-xl shadow-[0_10px_30px_rgba(255,0,0,0.4)] flex justify-center items-center transition-all btn-pulse uppercase tracking-wider">
+                    Quero ter acesso agora
+                </button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div data-section="carousel" class="py-10 mt-4 border-t border-gray-800 bg-[#0d0d12]">
+            <div class="px-6 mb-6 text-center">
+                <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Galeria</h2>
+                <p class="text-xs text-gray-500 mt-1 uppercase font-bold tracking-widest">Arraste para o lado</p>
+            </div>
+            <div class="swiper modelsSwiper">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide">
+
+                        <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/01.png" loading="lazy" decoding="async" class="w-full h-full object-cover">
+
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+
+                        <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/02.png" loading="lazy" decoding="async" class="w-full h-full object-cover">
+
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+
+                        <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/03.png" loading="lazy" decoding="async" class="w-full h-full object-cover">
+
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+
+                        <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/04.png" loading="lazy" decoding="async" class="w-full h-full object-cover">
+
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+
+                        <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/05.png" loading="lazy" decoding="async" class="w-full h-full object-cover">
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="px-6 mt-6">
+                <button type="submit" form="plan-form" class="cta-button w-full bg-red-600 hover:bg-red-700 text-white font-black text-xl py-5 rounded-xl shadow-[0_10px_30px_rgba(255,0,0,0.4)] flex justify-center items-center transition-all btn-pulse uppercase tracking-wider">
+                Quero ter acesso agora
+            </button>
+            </div>
+
+        </div>
+
+
+
+        <div data-section="preview" class="border-t border-gray-800">
+            <div class="p-4 mt-2">
+                <h2 class="text-xl font-black mb-4 uppercase text-center text-white italic tracking-tighter">Prévia <span class="text-red-600">Sem Censura</span></h2>
+                <div class="w-full bg-black rounded-2xl overflow-hidden border border-gray-800 shadow-xl relative">
+                    <video class="w-full aspect-[4/5] object-cover" muted loop playsinline webkit-playsinline controlslist="nodownload" preload="none" data-lazy-play>
+                    <source src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/Design%20sem%20nome%20%284%29%20%281%29.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-section="testimonials" class="p-6 mt-6 border-t border-gray-800">
+            <h2 class="text-lg font-black mb-6 uppercase flex items-center gap-2">
+                <svg class="inline-block text-red-600 align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>                Depoimentos
+            </h2>
+            <div class="space-y-4">
+
+
+                <div class="bg-[#1c1c1e] p-5 rounded-2xl border border-[#2c2c2e] shadow-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex text-yellow-500 text-xs gap-1">
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 leading-relaxed font-medium">Os vídeos são em alta definição e o grupo no Telegram é atualizado todos os dias. O suporte é excelente.</p>
+
+
+                    <div class="mt-4 pt-4 border-t border-white/5 flex items-center gap-2">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-[10px] font-black italic">
+                            E
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-bold">Elias <span class="text-green-500">✓ Compra Verificada</span></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-[#1c1c1e] p-5 rounded-2xl border border-[#2c2c2e] shadow-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex text-yellow-500 text-xs gap-1">
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <svg class="inline-block align-[-0.125em]" width="1em" height="1em" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 leading-relaxed font-medium">Paguei no Pix e o link já apareceu na tela. O pack de 500 vídeos é absurdo, recomendo o vitalício.</p>
+
+
+                    <div class="mt-4 pt-4 border-t border-white/5 flex items-center gap-2">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-[10px] font-black italic">
+                            J
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-bold">Jhonatan <span class="text-green-500">✓ Compra Verificada</span></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <button type="submit" form="plan-form" class="cta-button mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-black text-xl py-5 rounded-xl shadow-[0_10px_30px_rgba(255,0,0,0.4)] flex justify-center items-center transition-all btn-pulse uppercase tracking-wider">
+            Quero ter acesso agora
+        </button>
+
+        </div>
+
+
+
+        <div data-section="faqs" class="p-6 mt-2 mb-10 border-t border-gray-800 bg-[#0d0d12]/50">
+            <h2 class="text-lg font-black mb-6 uppercase tracking-tighter">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+
+
+                <details class="bg-[#1c1c1e] border border-[#2c2c2e] rounded-xl group overflow-hidden">
+                    <summary class="text-sm font-bold p-5 cursor-pointer flex justify-between items-center text-gray-300 group-open:text-red-500 transition-colors">
+                        Como recebo o acesso?
+                        <span class="transition-transform group-open:rotate-180"><svg class="inline-block align-[-0.125em]" width="0.75em" height="0.75em" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></span>
+                    </summary>
+                    <div class="px-5 pb-5 text-[13px] text-gray-500 font-medium border-t border-white/5 pt-4 bg-[#1c1c1e]">
+                        Atraves de um link do telegram
+                    </div>
+                </details>
+
+
+
+                <details class="bg-[#1c1c1e] border border-[#2c2c2e] rounded-xl group overflow-hidden">
+                    <summary class="text-sm font-bold p-5 cursor-pointer flex justify-between items-center text-gray-300 group-open:text-red-500 transition-colors">
+                        O pagamento é seguro e discreto?
+                        <span class="transition-transform group-open:rotate-180"><svg class="inline-block align-[-0.125em]" width="0.75em" height="0.75em" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></span>
+                    </summary>
+                    <div class="px-5 pb-5 text-[13px] text-gray-500 font-medium border-t border-white/5 pt-4 bg-[#1c1c1e]">
+                        Sim, totalmente anonimo
+                    </div>
+                </details>
+
+
+
+                <details class="bg-[#1c1c1e] border border-[#2c2c2e] rounded-xl group overflow-hidden">
+                    <summary class="text-sm font-bold p-5 cursor-pointer flex justify-between items-center text-gray-300 group-open:text-red-500 transition-colors">
+                        Os vídeos são atualizados?
+                        <span class="transition-transform group-open:rotate-180"><svg class="inline-block align-[-0.125em]" width="0.75em" height="0.75em" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></span>
+                    </summary>
+                    <div class="px-5 pb-5 text-[13px] text-gray-500 font-medium border-t border-white/5 pt-4 bg-[#1c1c1e]">
+                        Sim! Nosso catálogo já conta com mais de 350k de vídeos exclusivos e o grupo no Telegram recebe novas atualizações todas as semanas.
+                    </div>
+                </details>
+
+
+            </div>
+
+
+            <button type="submit" form="plan-form" class="cta-button mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-black text-xl py-5 rounded-xl shadow-[0_10px_30px_rgba(255,0,0,0.4)] flex justify-center items-center transition-all btn-pulse uppercase tracking-wider">
+            Quero ter acesso agora
+        </button>
+
+        </div>
+
+
+        <footer data-section="footer" class="text-center p-8 text-[10px] text-gray-600 border-t border-gray-900 bg-black uppercase tracking-widest font-black">
+            <p>Cornos &copy; 2026 - Proibido para menores de 18 anos</p>
+        </footer>
+
+    </div>
+
+
+    <div id="order-bump-modal" class="hidden fixed inset-0 z-[110] bg-black/85 overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="min-h-screen flex items-start sm:items-center justify-center p-2 sm:p-4">
+            <div class="w-full max-w-md bg-zinc-950 rounded-2xl border border-red-700/40 shadow-2xl overflow-hidden text-white">
+                <div class="px-5 pt-4 pb-2 text-[11px] uppercase tracking-widest text-red-500 font-bold flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> Oferta exclusiva — só agora
+                </div>
+
+                <div class="px-5">
+                    <img src="https://pub-10cac7e022894ad0b67a971bf2db2048.r2.dev/famous/photo_2026-05-05_15-50-57.jpg" alt="" class="w-full h-40 object-cover rounded-xl bg-zinc-900">
+                </div>
+
+                <div class="p-5 space-y-3">
+                    <h3 class="text-xl font-black uppercase tracking-tight">Oferta Relampago</h3>
+                    <p class="text-sm text-zinc-300 leading-relaxed whitespace-pre-line">Tenha Acesso a mais: &#43;𝟮𝟬 𝗩𝗜𝗣𝗦 &#43; 99.763 MIL VÍDEOS 🎬💦 Por Apenas &#43;𝗥$ 𝟯,𝟵𝟬</p>
+                    <div class="flex items-baseline gap-2 pt-1">
+                        <span class="text-xs text-zinc-400 uppercase tracking-widest">adicione por apenas</span>
+                        <span class="text-3xl font-black text-red-500">+ R$ 3,90</span>
+                    </div>
+                </div>
+                <div class="p-5 pt-0 grid grid-cols-2 gap-3">
+                    <button type="button" data-bump-refuse class="w-full py-5 rounded-xl bg-red-200 hover:bg-red-300 text-zinc-900 font-black text-base uppercase tracking-wider transition">Sou Broxa ⭕️</button>
+                    <button type="button" data-bump-accept class="w-full py-5 rounded-xl bg-lime-300 hover:bg-lime-400 text-zinc-900 font-black text-base uppercase tracking-wider shadow-lg shadow-lime-900/20 transition">🟢QUERO O ACESSO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var modal = document.getElementById('order-bump-modal');
+            if (!modal) return;
+            var resolved = false;
+            var pendingForm = null;
+
+            function setHidden(form, name, value) {
+                var i = form.querySelector('input[name="' + name + '"]');
+                if (!i) {
+                    i = document.createElement('input');
+                    i.type = 'hidden';
+                    i.name = name;
+                    form.appendChild(i);
+                }
+                i.value = value;
+            }
+
+            function close() {
+                modal.classList.add('hidden');
+            }
+
+            function open() {
+                modal.classList.remove('hidden');
+            }
+
+
+
+
+
+            function onSubmit(e) {
+                var form = e.target;
+                if (!form || (form.action || '').indexOf('/click') === -1) return;
+                if (resolved) return;
+                pendingForm = form;
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                open();
+            }
+            document.addEventListener('submit', onSubmit, true);
+
+            modal.querySelector('[data-bump-accept]').addEventListener('click', function() {
+                if (!pendingForm) return;
+                setHidden(pendingForm, 'bump', '1');
+                resolved = true;
+                close();
+                pendingForm.requestSubmit();
+            });
+            modal.querySelector('[data-bump-refuse]').addEventListener('click', function() {
+                if (!pendingForm) return;
+                setHidden(pendingForm, 'bump', '0');
+                resolved = true;
+                close();
+                pendingForm.requestSubmit();
+            });
+
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal && pendingForm && !resolved) {
+                    setHidden(pendingForm, 'bump', '0');
+                    resolved = true;
+                    close();
+                    pendingForm.requestSubmit();
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && pendingForm && !resolved && !modal.classList.contains('hidden')) {
+                    setHidden(pendingForm, 'bump', '0');
+                    resolved = true;
+                    close();
+                    pendingForm.requestSubmit();
+                }
+            });
+        })();
+    </script>
+
+
+
+    <div id="checkout-modal" class="fixed inset-0 z-[100] hidden bg-black/85 overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="min-h-screen flex items-start sm:items-center justify-center p-2 sm:p-4">
+            <div class="w-full max-w-md bg-zinc-900 rounded-2xl shadow-2xl overflow-hidden text-white">
+                <div class="flex items-center justify-between px-5 py-4 bg-zinc-950 border-b border-zinc-800">
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Pagamento via PIX
+                    </div>
+                    <button id="checkout-close" type="button" class="text-zinc-400 hover:text-white p-1" aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+                </div>
+
+                <div id="checkout-loading" class="p-10 text-center text-zinc-400">
+                    <div class="inline-block w-8 h-8 border-2 border-zinc-600 border-t-emerald-400 rounded-full animate-spin"></div>
+                    <div class="mt-3 text-sm">Gerando seu PIX seguro…</div>
+                </div>
+
+                <div id="checkout-error" class="hidden p-10 text-center">
+                    <div class="text-rose-400 font-bold mb-2">Não conseguimos gerar o PIX</div>
+                    <div class="text-sm text-zinc-400">Tente novamente em alguns segundos.</div>
+                    <button id="checkout-retry" type="button" class="mt-4 bg-emerald-500 text-black font-bold px-5 py-2 rounded">Tentar de novo</button>
+                </div>
+
+                <div id="checkout-body" class="hidden">
+                    <div class="px-5 py-3 bg-rose-950/30 border-b border-zinc-800 flex items-center justify-between">
+                        <div class="text-xs text-rose-300 font-bold uppercase">⏱ Este PIX expira em</div>
+                        <div class="text-lg font-black text-rose-300" data-timer>30:00</div>
+                    </div>
+
+                    <div class="px-5 pt-5">
+                        <div class="bg-white rounded-xl p-3 flex items-center justify-center">
+                            <img data-qr alt="QR Code PIX" class="w-full max-w-[220px]">
+                        </div>
+                    </div>
+
+                    <div class="p-5">
+                        <button id="checkout-copy" type="button" class="w-full bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 text-black font-black uppercase tracking-wider py-4 rounded-xl shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="11" height="11" rx="1"/><path d="M3 13V4a1 1 0 011-1h9"/></svg>
+            <span data-copy-label>Copiar código PIX</span>
+          </button>
+                        <input type="text" data-brcode readonly class="mt-2 w-full bg-zinc-800 text-zinc-400 text-[10px] font-mono px-3 py-2 rounded select-all">
+                    </div>
+
+                    <div class="px-5 pb-5">
+                        <div class="text-[11px] uppercase tracking-widest text-zinc-500 font-bold mb-3">Como pagar em 30 segundos</div>
+                        <ol class="space-y-2 text-sm text-zinc-200">
+                            <li class="flex gap-3"><span class="shrink-0 w-6 h-6 bg-emerald-500 text-black rounded-full font-black text-xs flex items-center justify-center">1</span><span>Abra o app do seu banco e vá em <b>PIX</b></span></li>
+                            <li class="flex gap-3"><span class="shrink-0 w-6 h-6 bg-emerald-500 text-black rounded-full font-black text-xs flex items-center justify-center">2</span><span>Toque em <b>Pix Copia e Cola</b> (ou escaneie o QR Code acima)</span></li>
+                            <li class="flex gap-3"><span class="shrink-0 w-6 h-6 bg-emerald-500 text-black rounded-full font-black text-xs flex items-center justify-center">3</span><span>Cole o código e <b>confirme o pagamento</b></span></li>
+                        </ol>
+                        <div class="mt-3 text-[11px] text-zinc-500 text-center leading-relaxed">Funciona em qualquer banco brasileiro<br>Itaú · Nubank · Bradesco · Caixa · BB · Inter · C6 · Santander</div>
+                    </div>
+
+                    <div id="checkout-status" class="px-5 py-3 bg-zinc-950 border-t border-zinc-800 text-center text-xs text-zinc-400 font-bold">
+                        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-1"></span> Aguardando pagamento…
+                    </div>
+
+                    <div class="px-5 py-4 bg-emerald-950/20 border-t border-emerald-900/40 space-y-1.5 text-xs text-emerald-200/80">
+                        <div>🔒 Pagamento processado pelo Banco Central via PIX</div>
+                        <div>⚡ Liberação automática em até 30 segundos após o pagamento</div>
+                        <div>✓ Receba o acesso aqui mesmo, sem precisar de cadastro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var modal = document.getElementById('checkout-modal');
+            if (!modal) return;
+            var loading = document.getElementById('checkout-loading');
+            var errBox = document.getElementById('checkout-error');
+            var body = document.getElementById('checkout-body');
+            var statusEl = document.getElementById('checkout-status');
+            var closeBtn = document.getElementById('checkout-close');
+            var retryBtn = document.getElementById('checkout-retry');
+            var copyBtn = document.getElementById('checkout-copy');
+            var copyLbl = modal.querySelector('[data-copy-label]');
+            var qrEl = modal.querySelector('[data-qr]');
+            var brEl = modal.querySelector('[data-brcode]');
+            var timerEl = modal.querySelector('[data-timer]');
+            var currentUUID = '';
+            var pollHandle = null;
+            var timerHandle = null;
+            var paid = false;
+
+            function show(el) {
+                el.classList.remove('hidden');
+            }
+
+            function hide(el) {
+                el.classList.add('hidden');
+            }
+
+            function fmtTimer(s) {
+                if (s < 0) s = 0;
+                var m = Math.floor(s / 60),
+                    ss = s % 60;
+                return (m < 10 ? '0' : '') + m + ':' + (ss < 10 ? '0' : '') + ss;
+            }
+
+            function track(uuid, evt) {
+                try {
+                    fetch('/track/checkout', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: 'uuid=' + encodeURIComponent(uuid) + '&event=' + evt,
+                        keepalive: true
+                    }).catch(function() {});
+                } catch (_) {}
+            }
+
+
+
+            var pixelInjected = false;
+
+            function injectPixHead(html) {
+                if (pixelInjected || !html) return;
+                pixelInjected = true;
+                var holder = document.createElement('div');
+                holder.innerHTML = html;
+                Array.prototype.slice.call(holder.childNodes).forEach(function(n) {
+                    if (n.nodeType === 1 && n.tagName === 'SCRIPT') {
+                        var s = document.createElement('script');
+                        for (var i = 0; i < n.attributes.length; i++) {
+                            s.setAttribute(n.attributes[i].name, n.attributes[i].value);
+                        }
+                        if (!n.src) s.text = n.textContent;
+                        document.head.appendChild(s);
+                    } else if (n.nodeType === 1 || n.nodeType === 3) {
+                        document.head.appendChild(n);
+                    }
+                });
+            }
+
+            function stopTimers() {
+                if (pollHandle) {
+                    clearInterval(pollHandle);
+                    pollHandle = null;
+                }
+                if (timerHandle) {
+                    clearInterval(timerHandle);
+                    timerHandle = null;
+                }
+            }
+
+            function openShell() {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                show(loading);
+                hide(errBox);
+                hide(body);
+            }
+
+            function closeShell(reason) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                stopTimers();
+                if (currentUUID && !paid && reason === 'user') {
+                    track(currentUUID, 'dismiss');
+                }
+            }
+
+            function startPolling(uuid) {
+                function check() {
+                    fetch('/pix/status?uuid=' + encodeURIComponent(uuid) + '&_=' + Date.now(), {
+                            cache: 'no-store'
+                        })
+                        .then(function(r) {
+                            return r.ok ? r.json() : null;
+                        })
+                        .then(function(j) {
+                            if (!j || j.status !== 'paid') return;
+                            paid = true;
+                            stopTimers();
+                            statusEl.innerHTML = '<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-1"></span>Pagamento confirmado! Redirecionando…';
+                            statusEl.className = 'px-5 py-3 bg-emerald-900/40 border-t border-emerald-700 text-center text-xs text-emerald-300 font-bold';
+                            setTimeout(function() {
+                                window.location.href = j.next || '/tks?uuid=' + encodeURIComponent(uuid);
+                            }, 700);
+                        }).catch(function() {});
+                }
+                pollHandle = setInterval(check, 3000);
+                check();
+            }
+
+            function startTimer(expiresAt) {
+                function tick() {
+                    var s = Math.floor(expiresAt - Date.now() / 1000);
+                    timerEl.textContent = fmtTimer(s);
+                }
+                timerHandle = setInterval(tick, 1000);
+                tick();
+            }
+
+            function renderBody(data) {
+                qrEl.src = data.qr_image;
+                brEl.value = data.brcode;
+                hide(loading);
+                hide(errBox);
+                show(body);
+                startTimer(data.expires_at);
+                startPolling(data.uuid);
+                track(data.uuid, 'open');
+                injectPixHead(data.pix_head_html);
+            }
+
+            function loadCheckout(uuid) {
+                currentUUID = uuid;
+
+
+
+                try {
+                    localStorage.setItem('bld_pending', uuid);
+                } catch (_) {}
+                fetch('/pix-data?uuid=' + encodeURIComponent(uuid), {
+                    cache: 'no-store',
+                    headers: {
+                        'X-Requested-With': 'fetch'
+                    }
+                }).then(function(r) {
+                    if (!r.ok) throw new Error('http ' + r.status);
+                    return r.json();
+                }).then(function(data) {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                        return;
+                    }
+                    renderBody(data);
+                }).catch(function(e) {
+                    console.warn('pix-data failed', e);
+                    hide(loading);
+                    hide(body);
+                    show(errBox);
+                });
+            }
+
+            function fallbackSubmit(form) {
+                closeShell('fallback');
+                document.removeEventListener('submit', onSubmit, true);
+                try {
+                    form.submit();
+                } catch (_) {}
+            }
+
+            function startCheckout(form) {
+                openShell();
+                fetch('/click', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'X-Requested-With': 'fetch'
+                    }
+                }).then(function(r) {
+                    if (!r.ok) throw new Error('click http ' + r.status);
+                    return r.json();
+                }).then(function(j) {
+                    if (!j.uuid) throw new Error('no uuid');
+                    loadCheckout(j.uuid);
+                }).catch(function(e) {
+                    console.warn('checkout init failed; falling back to legacy flow', e);
+                    fallbackSubmit(form);
+                });
+            }
+
+            function onSubmit(e) {
+                var form = e.target;
+                if (!form || (form.action || '').indexOf('/click') === -1) return;
+                e.preventDefault();
+                startCheckout(form);
+            }
+
+            document.addEventListener('submit', onSubmit, true);
+            closeBtn.addEventListener('click', function() {
+                closeShell('user');
+            });
+            retryBtn.addEventListener('click', function() {
+                if (!currentUUID) return;
+                show(loading);
+                hide(errBox);
+                loadCheckout(currentUUID);
+            });
+            copyBtn.addEventListener('click', function() {
+                var v = brEl.value;
+                var done = function() {
+                    copyLbl.textContent = 'Código copiado!';
+                    setTimeout(function() {
+                        copyLbl.textContent = 'Copiar código PIX';
+                    }, 2000);
+                };
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(v).then(done).catch(function() {
+                        brEl.select();
+                        document.execCommand('copy');
+                        done();
+                    });
+                } else {
+                    brEl.select();
+                    document.execCommand('copy');
+                    done();
+                }
+            });
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target === modal.firstElementChild) closeShell('user');
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeShell('user');
+            });
+        })();
+    </script>
+
+    <script>
+        (function() {
+
+
+
+
+            var vids = document.querySelectorAll('video[data-lazy-play]');
+            if (!vids.length) return;
+
+            function play(v) {
+                var p = v.play();
+                if (p && p.catch) p.catch(function() {});
+            }
+            if (!('IntersectionObserver' in window)) {
+                vids.forEach(play);
+                return;
+            }
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting) play(e.target);
+                    else e.target.pause();
+                });
+            }, {
+                rootMargin: '200px 0px',
+                threshold: 0.1
+            });
+            vids.forEach(function(v) {
+                io.observe(v);
+            });
+        })();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function() {
+            const cards = document.querySelectorAll('.plan-card');
+            const radios = document.querySelectorAll('.plan-radio');
+            const positionInput = document.getElementById('position-input');
+            const form = document.getElementById('plan-form');
+            let submitting = false;
+
+            function select(position) {
+                cards.forEach(c => c.classList.toggle('selected', String(c.dataset.position) === String(position)));
+                radios.forEach(r => {
+                    if (String(r.value) === String(position)) r.checked = true;
+                });
+                if (positionInput) positionInput.value = position;
+            }
+
+            function submitWith(position) {
+                if (submitting) return;
+                submitting = true;
+                select(position);
+
+                requestAnimationFrame(() => form.requestSubmit());
+            }
+
+            cards.forEach(card => {
+                card.parentElement.addEventListener('click', () => submitWith(card.dataset.position));
+            });
+
+
+            const initial = document.querySelector('.plan-radio:checked');
+            if (initial) {
+                select(initial.value);
+            } else if (cards.length > 0) {
+                select(cards[0].dataset.position);
+            }
+
+
+            form ? .addEventListener('submit', () => {
+                if (!positionInput.value && cards.length > 0) {
+                    positionInput.value = cards[0].dataset.position;
+                }
+            });
+        })();
+
+
+        if (document.querySelector('.modelsSwiper')) {
+            new Swiper('.modelsSwiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                loop: true,
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1.5,
+                    slideShadows: true
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true
+                }
+            });
+        }
+
+
+        (function() {
+            const el = document.getElementById('timer');
+            if (!el) return;
+            let time = 15 * 60;
+            setInterval(() => {
+                const m = Math.floor(time / 60),
+                    s = time % 60;
+                el.textContent = `${m}:${s < 10 ? '0' + s : s}`;
+                if (time > 0) time--;
+            }, 1000);
+        })();
+
+
+        document.getElementById('heroVideo') ? .play().catch(() => {});
+
+
+        (function() {
+            if (!('IntersectionObserver' in window)) return;
+            var offerId = "1e4dd48e-dfe8-4fa4-a021-451bde770fa9";
+            if (!offerId) return;
+            var seen = {};
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (!e.isIntersecting) return;
+                    var sec = e.target.getAttribute('data-section');
+                    if (!sec || seen[sec]) return;
+                    seen[sec] = true;
+                    io.unobserve(e.target);
+                    var body = 'offer_id=' + encodeURIComponent(offerId) + '&section=' + encodeURIComponent(sec);
+                    try {
+                        fetch('/track/section', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded'
+                            },
+                            body: body,
+                            keepalive: true
+                        }).catch(function() {});
+                    } catch (_) {}
+                });
+            }, {
+                threshold: 0.5
+            });
+            document.querySelectorAll('[data-section]').forEach(function(el) {
+                io.observe(el);
+            });
+        })();
+    </script>
+
+    <script>
+        (function() {
+            try {
+                var p = localStorage.getItem('bld_pending');
+                if (!p) return;
+                fetch('/pix/status?uuid=' + encodeURIComponent(p), {
+                        cache: 'no-store'
+                    })
+                    .then(function(r) {
+                        return r.json();
+                    })
+                    .then(function(j) {
+                        if (!j) return;
+                        if (j.status === 'paid') {
+                            window.location = j.next || ('/pix?uuid=' + encodeURIComponent(p));
+                            return;
+                        }
+                        if (j.expired) {
+
+
+                            localStorage.removeItem('bld_pending');
+                            return;
+                        }
+
+                        window.location = '/pix?uuid=' + encodeURIComponent(p);
+                    })
+                    .catch(function() {});
+            } catch (e) {}
+        })();
+    </script>
+
+    <script>
+        (function() {
+            function c() {
+                var b = a.contentDocument || a.contentWindow.document;
+                if (b) {
+                    var d = b.createElement('script');
+                    d.innerHTML = "window.__CF$cv$params={r:'9fb6abd0eda75a2f',t:'MTc3ODcyNzgyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                    b.getElementsByTagName('head')[0].appendChild(d)
+                }
+            }
+            if (document.body) {
+                var a = document.createElement('iframe');
+                a.height = 1;
+                a.width = 1;
+                a.style.position = 'absolute';
+                a.style.top = 0;
+                a.style.left = 0;
+                a.style.border = 'none';
+                a.style.visibility = 'hidden';
+                document.body.appendChild(a);
+                if ('loading' !== document.readyState) c();
+                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                else {
+                    var e = document.onreadystatechange || function() {};
+                    document.onreadystatechange = function(b) {
+                        e(b);
+                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
+                    }
+                }
+            }
+        })();
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"a9516c5d091f4ee49db8151798fed301","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
